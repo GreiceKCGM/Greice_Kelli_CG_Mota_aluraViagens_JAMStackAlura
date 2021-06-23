@@ -44,6 +44,11 @@ export default function Home() {
           <input></input>
           <Text variant = "paragraph1"tag="p">Data do retorno</Text>
           <input></input>
+          <Text  variant = "paragraph1"tag="p">Local de Origem</Text>
+          <input></input>
+          <Text variant = "paragraph1"tag="p">Local de chegada</Text>
+          <input></input>
+
         </div>
         <subTitle> Como será feito o pagamento? </subTitle>
         <button>Opções de pagamento</button>
@@ -74,7 +79,16 @@ export default function Home() {
           <input></input>
           <Text variant = "paragraph1"tag="p">telefone</Text>
           <input></input>
-          <Button>Comprar</Button>
+          <Button
+          variant= "background.main"
+          display="block"
+          margin={{
+            xs: 'auto',
+            md: 'initial',
+          }}
+          
+          
+          >Comprar</Button>
         
         
         </div>
