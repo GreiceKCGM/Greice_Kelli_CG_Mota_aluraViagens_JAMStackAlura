@@ -1,3 +1,5 @@
+import { typographyVariants } from './typographyVariants';
+
 const colors = {
     background: {
       light: {
@@ -24,12 +26,18 @@ const colors = {
         contrastText: '#fff',
       },
     },
+    tertiary: {
+        main: {
+          color: '#FFFFFF',
+          contrastText: '#fff',
+        },
+      },
   
   };
   
   export default {
     colors,
-   // typographyVariants,
+   typographyVariants ,
     breakpoints: {
       xs: 0, // extra small
       sm: 480, // small
@@ -38,7 +46,7 @@ const colors = {
       xl: 1200, // extra large
     },
     borderRadius: '10px',
-    fontFamily: '\'Pattaya\', Roboto',
+    fontFamily: '\'Pattaya\', Roboto, sans-serif',
     transition: '200ms ease-in-out',
   };
   

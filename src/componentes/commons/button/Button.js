@@ -1,12 +1,12 @@
 import styled  from 'styled-components';
-import get from 'lodash/get';
+
 
 
 export const Button = styled.button`
-    background: #35B6FF;
+    background: ${({ theme }) => theme.colors.background.main.color};
     border:0;
     border-radius: ${({ theme }) => theme.borderRadius};
-    color: #FFFFFF;
+    color:  ${({ theme }) => theme.colors.tertiary.main.color};
     cursor: pointer;
     font-weight: bold;
     padding: 12px 26px;
