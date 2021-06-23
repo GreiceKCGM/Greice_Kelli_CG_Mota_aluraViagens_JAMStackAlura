@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import { Button } from '../src/componentes/commons/button/Button'
+import Text from '../src/componentes/foundation/text';
 
 const Title = styled.h1`
   font-family: Pattaya;
@@ -15,37 +16,63 @@ const subTitle = styled.h2`
 
 export default function Home() {
   return (
-    <div >
+    <div  style = {{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
 
-      <div>
+      <div style = {{
+        flex: '1',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+    }}>
         <Title> Alura Viagens</Title> 
-        <subTitle> Quando será a viagem? </subTitle>
-        <div>
-          <p>Data da saida</p>
+        <Text variant = "subTitle"tag="h2"> Quando será a viagem? </Text>
+
+        <div style = {{
+        flex: '1',
+        display: 'flex',
+        justifyContent: 'space-between',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
+    }}>
+          <Text  variant = "paragraph1"tag="p">Data da saida</Text>
           <input></input>
-          <p>Data do retorno</p>
+          <Text variant = "paragraph1"tag="p">Data do retorno</Text>
           <input></input>
         </div>
         <subTitle> Como será feito o pagamento? </subTitle>
         <button>Opções de pagamento</button>
-        <div>
+        <div
+        style = {{
+          flex: '1',
+          display: 'flex',
+          justifyContent: 'space-between',
+          flexWrap: 'wrap',
+          flexDirection: 'column',
+      }}
+        >
 
-        <subTitle> Quem vai viajar? </subTitle>
+        <Text variant = "subTitle"tag="h2"> Quem vai viajar? </Text>
 
-        <p>Nome</p>
+        <Text variant = "paragraph1"tag="p">Nome</Text>
           <input></input>
-          <p>Sobrenome</p>
+          <Text  variant = "paragraph1"tag="p">Sobrenome</Text>
           <input></input>
 
-          <p>pais de residencia</p>
+          <Text variant = "paragraph1"tag="p">pais de residencia</Text>
           <input></input>
-          <p>Data de nascimento</p>
+          <Text  variant = "paragraph1"tag="p">Data de nascimento</Text>
           <input></input>
-          <p>CPF</p>
+          <Text variant = "paragraph1"tag="p">CPF</Text>
           <input></input>
-          <p>email</p>
+          <Text variant = "paragraph1"tag="p">email</Text>
           <input></input>
-          <p>telefone</p>
+          <Text variant = "paragraph1"tag="p">telefone</Text>
           <input></input>
           <Button>Comprar</Button>
         
