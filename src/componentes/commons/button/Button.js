@@ -1,4 +1,5 @@
 import styled  from 'styled-components';
+import { TextStyleVariantsMap } from '../../foundation/text';
 
 
 
@@ -8,6 +9,7 @@ export const Button = styled.button`
     border-radius: ${({ theme }) => theme.borderRadius};
     color:  ${({ theme }) => theme.colors.tertiary.main.color};
     cursor: pointer;
+    font-family: Roboto;
     font-weight: bold;
     padding: 12px 26px;
     opacity:1;
@@ -16,6 +18,8 @@ export const Button = styled.button`
     &:focus {
         opacity: 0.6;
     }
+
+    ${TextStyleVariantsMap.paragraph1}
 
 
 `;

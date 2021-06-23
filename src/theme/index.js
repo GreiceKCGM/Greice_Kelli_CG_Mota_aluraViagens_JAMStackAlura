@@ -22,7 +22,7 @@ const colors = {
     },
     secondary: {
       main: {
-        color: '#35B6FF',
+        color: '#0094E8',
         contrastText: '#fff',
       },
     },
@@ -46,7 +46,7 @@ const colors = {
       xl: 1200, // extra large
     },
     borderRadius: '10px',
-    fontFamily: '\'Pattaya\', Roboto, sans-serif',
+    fontFamily: '\'Pattaya\', Roboto',
     transition: '200ms ease-in-out',
   };
   

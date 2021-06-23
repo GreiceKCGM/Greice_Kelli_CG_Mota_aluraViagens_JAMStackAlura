@@ -5,6 +5,11 @@ export const typographyVariants = {
         fontWeight: '700',
         lineHeight: 1.25, // 125%
       },
+      titleXS: {
+        fontSize: '36px',
+        fontWeight: '400',
+        lineHeight: 1.25, // 125%
+      },
       subTitle: {
         fontSize: '24px',
         fontWeight: '500',
