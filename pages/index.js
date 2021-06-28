@@ -1,98 +1,99 @@
 import React from 'react';
-import styled from 'styled-components'
-import { Button } from '../src/componentes/commons/button/Button'
+import styled from 'styled-components';
+import { Button } from '../src/componentes/commons/button/Button';
 import Text from '../src/componentes/foundation/text';
+import { Box } from '../src/componentes/layout/Box';
+import Grid from '../src/componentes/layout/Grid';
+import FormPagamento from '../src/componentes/patterns/forms/formsPagamento';
 
-const Title = styled.h1`
-  font-family: Pattaya;
-  font-size: 72px;
-  color: ${({ theme }) => theme.colors.secondary.main.color};
-`
-const subTitle = styled.h2`
-  font-family: Roboto;
-  font-size: 24px ;
-  color: ${({ theme }) => theme.colors.primary};
-`
+const PageStyle = styled.div`
+  background: ${({ theme }) => theme.colors.background.main.color};
+  width: 100%;
+  padding-left: 245px;
+  padding-right:245px;
+
+
+`;
 
 export default function Home() {
   return (
-    <div  style = {{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-    }}>
+    <PageStyle>
 
-      <div style = {{
-        flex: '1',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flexWrap: 'wrap',
-        flexDirection: 'column',
-    }}>
-        <Title> Alura Viagens</Title> 
-        <Text variant = "subTitle"tag="h2"> Quando será a viagem? </Text>
+      <Box
+        flex="1"
+        display="flex"
+        // flexWrap="wrap"
+        justifyContent="space-between"
 
-        <div style = {{
-        flex: '1',
-        display: 'flex',
-        justifyContent: 'space-between',
-        flexWrap: 'wrap',
-        flexDirection: 'column',
-    }}>
-          <Text  variant = "paragraph1"tag="p">Data da saida</Text>
-          <input></input>
-          <Text variant = "paragraph1"tag="p">Data do retorno</Text>
-          <input></input>
-          <Text  variant = "paragraph1"tag="p">Local de Origem</Text>
-          <input></input>
-          <Text variant = "paragraph1"tag="p">Local de chegada</Text>
-          <input></input>
+      >
 
-        </div>
-        <subTitle> Como será feito o pagamento? </subTitle>
-        <button>Opções de pagamento</button>
-        <div
-        style = {{
-          flex: '1',
-          display: 'flex',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          flexDirection: 'column',
-      }}
+        <Grid.Container
+          backgroundColor="white"
+        // flex: '1',
+        //   display: 'flex',
+        //   justifyContent: 'space-between',
+        //   alignItems: 'center',
+        //   flexWrap: 'wrap',
+        //   flexDirection: 'column',
+
         >
+          <Grid.Row>
+            <Grid.Col>
+              <Text variant="title" tag="h1" color="secondary.main" fontFamily="Pattaya">
+                Alura Viagens
 
-        <Text variant = "subTitle"tag="h2"> Quem vai viajar? </Text>
+              </Text>
+              <Text variant="subTitle" tag="p" fontFamily="Roboto"> Quando será a viagem? </Text>
 
-        <Text variant = "paragraph1"tag="p">Nome</Text>
-          <input></input>
-          <Text  variant = "paragraph1"tag="p">Sobrenome</Text>
-          <input></input>
+              <Text variant="paragraph1" tag="p">Data da saida</Text>
+              <input />
+              <Text variant="paragraph1" tag="p">Data do retorno</Text>
+              <input />
 
-          <Text variant = "paragraph1"tag="p">pais de residencia</Text>
-          <input></input>
-          <Text  variant = "paragraph1"tag="p">Data de nascimento</Text>
-          <input></input>
-          <Text variant = "paragraph1"tag="p">CPF</Text>
-          <input></input>
-          <Text variant = "paragraph1"tag="p">email</Text>
-          <input></input>
-          <Text variant = "paragraph1"tag="p">telefone</Text>
-          <input></input>
-          <Button
-          variant= "background.main"
-          display="block"
-          margin={{
-            xs: 'auto',
-            md: 'initial',
-          }}
-          
-          
-          >Comprar</Button>
-        
-        
-        </div>
-      </div>
-    </div>
+              <Text variant="paragraph1" tag="p">Local de Origem</Text>
+              <input />
+              <Text variant="paragraph1" tag="p">Local de chegada</Text>
+              <input />
+            </Grid.Col>
+            <Grid.Col>
+              <Text variant="subTitle" tag="h2"> Como será feito o pagamento? </Text>
+              <FormPagamento />
+
+            </Grid.Col>
+            <Grid.Col>
+
+              <Text variant="subTitle" tag="h2"> Quem vai viajar? </Text>
+
+              <Text variant="paragraph2" tag="p">Nome</Text>
+              <input />
+              <Text variant="paragraph2" tag="p">Sobrenome</Text>
+              <input />
+
+              <Text variant="paragraph2" tag="p">pais de residencia</Text>
+              <input />
+              <Text variant="paragraph2" tag="p">Data de nascimento</Text>
+              <input />
+              <Text variant="paragraph2" tag="p">CPF</Text>
+              <input />
+              <Text variant="paragraph2" tag="p">email</Text>
+              <input />
+              <Text variant="paragraph2" tag="p">telefone</Text>
+              <input />
+              <Button
+                variant="background.main"
+                display="block"
+                margin={{
+                  xs: 'auto',
+                  md: 'initial',
+                }}
+              >
+                Comprar
+              </Button>
+            </Grid.Col>
+          </Grid.Row>
+
+        </Grid.Container>
+      </Box>
+    </PageStyle>
   );
 }
