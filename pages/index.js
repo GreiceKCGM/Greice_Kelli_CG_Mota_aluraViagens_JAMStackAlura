@@ -38,7 +38,7 @@ export default function Home() {
 
         >
           <Grid.Row>
-            <Grid.Col>
+            <Grid.Col flexDirection="row">
               <Text variant="title" tag="h1" color="secondary.main" fontFamily="Pattaya">
                 Alura Viagens
 

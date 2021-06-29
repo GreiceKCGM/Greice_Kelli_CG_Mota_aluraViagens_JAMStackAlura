@@ -1,11 +1,10 @@
-import styled  from 'styled-components';
+import styled from 'styled-components';
 import get from 'lodash/get';
 import { TextStyleVariantsMap } from '../../foundation/text';
 import { propToStyle } from '../../../theme/utils/propToStyle';
 
-
-
 export const Button = styled.button`
+    width:145px;
     background-color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
     border:0;
     border-radius: ${({ theme }) => theme.borderRadius};
@@ -25,6 +24,7 @@ export const Button = styled.button`
 
     ${propToStyle('margin')}
     ${propToStyle('display')}
+    ${propToStyle('marginTop')}
 
 
 `;

@@ -1,15 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 import normalize from 'styled-normalize';
 
-
-
 export const GlobalStyle = createGlobalStyle`
     *   {
       box-sizing: border-box;
 
     }
 
-    ${ normalize }
+    ${normalize}
 
   body {
     margin: 0;
@@ -24,8 +22,8 @@ export const GlobalStyle = createGlobalStyle`
     }
     #__next {
         flex: 1;
-        display: felx;
+        display: flex;
         flex-direction: column;
     }
 
-`
+`;
