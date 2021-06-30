@@ -76,12 +76,13 @@ function FormContent() {
 
             <Text
               variant="paragraph1"
-              tag="p"
+              tag="label"
             >
               Data da saida
             </Text>
             <TextField
-              placeholder="dd/mm/yyyy"
+              type="date"
+              placeholder="DD/MM/YYYY"
               name="dataSaida"
               value={userInfo.dataSaida}
               onChange={handleChange}
@@ -91,12 +92,13 @@ function FormContent() {
 
             <Text
               variant="paragraph1"
-              tag="p"
+              tag="label"
             >
               Data do retorno
             </Text>
             <TextField
-              placeholder="dd/mm/yyyy"
+              type="date"
+              placeholder="DD/MM/YYYY"
               name="dataRetorno"
               value={userInfo.dataRetorno}
               onChange={handleChange}
@@ -114,11 +116,12 @@ function FormContent() {
           <Grid.Col>
             <Text
               variant="paragraph1"
-              tag="p"
+              tag="label"
             >
               Local de Origem
             </Text>
             <TextField
+              type="text"
               placeholder=""
               name="localOrigem"
               value={userInfo.localOrigem}
@@ -130,11 +133,12 @@ function FormContent() {
 
             <Text
               variant="paragraph1"
-              tag="p"
+              tag="label"
             >
               Local de Chegada
             </Text>
             <TextField
+              type="text"
               placeholder=""
               name="localChegada"
               value={userInfo.localChegada}
@@ -167,11 +171,12 @@ function FormContent() {
 
         <Text
           variant="paragraph2"
-          tag="p"
+          tag="label"
         >
           Nome
         </Text>
         <TextField
+          type="text"
           placeholder="Nome"
           name="name"
           value={userInfo.name}
@@ -179,11 +184,12 @@ function FormContent() {
         />
         <Text
           variant="paragraph2"
-          tag="p"
+          tag="label"
         >
           Sobrenome
         </Text>
         <TextField
+          type="text"
           placeholder="sobrenome"
           name="sobrenome"
           value={userInfo.sobrenome}
@@ -200,11 +206,12 @@ function FormContent() {
 
             <Text
               variant="paragraph2"
-              tag="p"
+              tag="label"
             >
-              pais de residencia
+              Pais de residencia
             </Text>
             <TextField
+              type="text"
               placeholder=""
               name="paisResidencia"
               value={userInfo.paisResidencia}
@@ -215,12 +222,13 @@ function FormContent() {
 
             <Text
               variant="paragraph2"
-              tag="p"
+              tag="label"
             >
               Data de nascimento
             </Text>
             <TextField
-              placeholder="dd/mm/yyyy"
+              type="date"
+              placeholder="DD/MM/YYYY"
               name="dataNascimento"
               value={userInfo.dataNascimento}
               onChange={handleChange}
@@ -231,11 +239,12 @@ function FormContent() {
 
         <Text
           variant="paragraph2"
-          tag="p"
+          tag="label"
         >
           CPF
         </Text>
         <TextField
+          type="text"
           placeholder="000.000.000-00"
           name="cpf"
           value={userInfo.cpf}
@@ -243,11 +252,12 @@ function FormContent() {
         />
         <Text
           variant="paragraph2"
-          tag="p"
+          tag="label"
         >
           Email
         </Text>
         <TextField
+          type="text"
           placeholder="exemplo@dominio.com"
           name="email"
           value={userInfo.email}
@@ -255,11 +265,12 @@ function FormContent() {
         />
         <Text
           variant="paragraph2"
-          tag="p"
+          tag="label"
         >
-          telefone
+          Telefone
         </Text>
         <TextField
+          type="text"
           placeholder="(__)____-____"
           name="telefone"
           value={userInfo.telefone}

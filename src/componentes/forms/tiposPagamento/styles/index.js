@@ -7,6 +7,7 @@ export const InputPagamentos = styled.input`
 `;
 
 export const TiposPagamentoWrapper = styled.div`
+flex: 1;
 display: flex;
 flex-direction: column;
 justify-content: center;
