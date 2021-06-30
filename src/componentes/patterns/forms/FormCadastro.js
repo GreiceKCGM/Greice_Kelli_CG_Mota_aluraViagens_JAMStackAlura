@@ -40,6 +40,12 @@ function FormContent() {
 
   // const isFormInvalid = userInfo.dataSaida.length === 0 || userInfo.dataRetorno.length === 0 ||
 
+  const todayIso8601 = new Date().toISOString().split('T')[0];
+
+  function emailIsInvalid() {
+    return userInfo.email.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userInfo.email);
+  }
+
   return (
     <PageStyle>
 
@@ -84,6 +90,7 @@ function FormContent() {
               type="date"
               placeholder="DD/MM/YYYY"
               name="dataSaida"
+              min={todayIso8601}
               value={userInfo.dataSaida}
               onChange={handleChange}
             />
@@ -100,6 +107,7 @@ function FormContent() {
               type="date"
               placeholder="DD/MM/YYYY"
               name="dataRetorno"
+              min={todayIso8601}
               value={userInfo.dataRetorno}
               onChange={handleChange}
             />
@@ -230,6 +238,7 @@ function FormContent() {
               type="date"
               placeholder="DD/MM/YYYY"
               name="dataNascimento"
+              max={todayIso8601}
               value={userInfo.dataNascimento}
               onChange={handleChange}
             />
@@ -250,19 +259,38 @@ function FormContent() {
           value={userInfo.cpf}
           onChange={handleChange}
         />
+
         <Text
           variant="paragraph2"
           tag="label"
         >
           Email
         </Text>
-        <TextField
-          type="text"
-          placeholder="exemplo@dominio.com"
-          name="email"
-          value={userInfo.email}
-          onChange={handleChange}
-        />
+        <Box
+          paddingTop="2px"
+          marginBottom="10px"
+
+        >
+          <TextField
+            type="text"
+            placeholder="exemplo@dominio.com"
+            name="email"
+            value={userInfo.email}
+            onChange={handleChange}
+            marginBottom="0px"
+          />
+
+          {emailIsInvalid() && (
+            <Text
+              variant="paragraph2"
+              tag="span"
+              color="error.main"
+            >
+              E-mail inválido!
+            </Text>
+          ) }
+
+        </Box>
         <Text
           variant="paragraph2"
           tag="label"

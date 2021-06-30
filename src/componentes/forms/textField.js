@@ -2,9 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Text from '../foundation/text';
+import { propToStyle } from '../../theme/utils/propToStyle';
 
 const InputWrapper = styled.div`
   margin-bottom: 17px;
+  ${propToStyle('marginBottom')}
+  
  
 `;
 
@@ -14,6 +17,7 @@ const Input = styled(Text)`
   padding: 12px 16px;
   outline: 0;
   border-radius: ${({ theme }) => theme.borderRadius};
+  ${propToStyle('marginBottom')}
 `;
 
 Input.defaultProps = {
@@ -26,7 +30,10 @@ export default function TextField({
   placeholder,
   name,
   onChange,
+  min,
+  max,
   value,
+  marginBottom,
 }) {
   return (
     <InputWrapper>
@@ -35,7 +42,10 @@ export default function TextField({
         placeholder={placeholder}
         name={name}
         onChange={onChange}
+        min={min}
+        max={max}
         value={value}
+        marginBottom={marginBottom}
       />
     </InputWrapper>
   );
@@ -46,5 +56,14 @@ TextField.propTypes = {
   placeholder: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  min: PropTypes.string,
+  max: PropTypes.string,
   value: PropTypes.string.isRequired,
+  marginBottom: PropTypes.string,
+};
+
+TextField.defaultProps = {
+  min: '',
+  max: '',
+  marginBottom: '',
 };

@@ -10,6 +10,8 @@ export const Box = styled.div`
   ${propToStyle('backgroundColor')}
   ${propToStyle('paddingRigth')}
   ${propToStyle('paddingLeft')}
+  ${propToStyle('paddingTop')}
   ${propToStyle('margin')}
+  ${propToStyle('marginBottom')}
   ${propToStyle('textAling')}
 `;
