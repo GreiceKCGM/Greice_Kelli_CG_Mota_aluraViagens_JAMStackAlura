@@ -12,15 +12,19 @@ const Container = styled.div`
 
     ${breakpointsMedia({
     xs: css`
+        padding-right: 16px;
+        padding-left: 16px;
 
         `,
     sm: css`
         max-width: 576px; 
+        padding-right: 16px;
+        padding-left: 16px;
         `,
     md: css`
         max-width: 768px;
-        padding-right: 16px;
-        padding-left: 16px; 
+        padding-right: 24px;
+        padding-left: 24px; 
         `,
     lg: css`
         max-width: 1160px; 
@@ -36,13 +40,18 @@ const Container = styled.div`
 const Row = styled.div`
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    //flex-direction: column;
+    margin-right: -16px;
+    margin-left: -16px;
+    ${propToStyle('flexDirection')}
+
+    
 
 `;
 
 const Col = styled.div`
-  padding-right: 170px;
-  padding-left: 170px;
+  padding-right: 16px;
+  padding-left:16px;
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;

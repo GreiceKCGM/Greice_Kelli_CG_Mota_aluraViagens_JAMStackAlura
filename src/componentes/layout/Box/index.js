@@ -8,4 +8,8 @@ export const Box = styled.div`
   ${propToStyle('justifyContent')}
   ${propToStyle('flexWrap')}
   ${propToStyle('backgroundColor')}
+  ${propToStyle('paddingRigth')}
+  ${propToStyle('paddingLeft')}
+  ${propToStyle('margin')}
+  ${propToStyle('textAling')}
 `;

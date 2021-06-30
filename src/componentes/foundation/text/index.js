@@ -34,6 +34,12 @@ export const TextStyleVariantsMap = {
         line-height: ${({ theme }) => theme.typographyVariants.paragraph1.lineHeight};
     `,
 
+  paragraph2: css`
+    font-size: ${({ theme }) => theme.typographyVariants.paragraph2.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.paragraph2.fontWeight};
+    line-height: ${({ theme }) => theme.typographyVariants.paragraph2.lineHeight};
+    `,
+
   smallestException: css`
         font-size: ${({ theme }) => theme.typographyVariants.smallestException.fontSize};
         font-weight: ${({ theme }) => theme.typographyVariants.smallestException.fontWeight};
@@ -43,10 +49,12 @@ export const TextStyleVariantsMap = {
 
 const TextBase = styled.span`
     font-family:Roboto;
+    margin-bottom: 8px;
      ${(props) => TextStyleVariantsMap[props.variant]}
      color: ${({ theme, color }) => get(theme, `colors.${color}.color`)};
      ${propToStyle('textAlign')}
      ${propToStyle('fontFamily')}
+     ${propToStyle('marginBottom')}
 
 `;
 

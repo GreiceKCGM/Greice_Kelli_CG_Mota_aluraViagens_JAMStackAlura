@@ -10,6 +10,15 @@ const FormPagamentoWrapper = styled.div`
 `;
 
 export default function FormPagamento() {
+  const [userInfo, setUserInfo] = React.useState({ tipoPagamentoSelected: '' });
+
+  function handleClick(event) {
+    const isClickArea = event.target.closest('[data-click-area="true"]');
+    setUserInfo({
+      ...userInfo,
+      tipoPagamentoSelected: isClickArea.firstChild.value,
+    });
+  }
   return (
     <FormPagamentoWrapper>
 
@@ -18,17 +27,23 @@ export default function FormPagamento() {
         name="tipoPagamento"
         value="Transferência"
         img="transferencia.png"
+        onClick={handleClick}
+        selected={userInfo.tipoPagamentoSelected === 'Transferência'}
       />
       <TiposPagamento
         name="tipoPagamento"
         value="Cartão"
         img="cartao.png"
+        onClick={handleClick}
+        selected={userInfo.tipoPagamentoSelected === 'Cartão'}
       />
       <TiposPagamento
         end_round_edge
         name="tipoPagamento"
         value="PayPal"
         img="paypal.png"
+        onClick={handleClick}
+        selected={userInfo.tipoPagamentoSelected === 'PayPal'}
       />
     </FormPagamentoWrapper>
 

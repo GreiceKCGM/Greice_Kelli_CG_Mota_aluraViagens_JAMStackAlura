@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import get from 'lodash/get';
 import { TextStyleVariantsMap } from '../../foundation/text';
 import { propToStyle } from '../../../theme/utils/propToStyle';
+import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 
 export const Button = styled.button`
     width:145px;
@@ -21,6 +22,25 @@ export const Button = styled.button`
     }
 
     ${TextStyleVariantsMap.paragraph1}
+
+    &:disabled {
+    cursor: not-allowed;
+    opacity: .2;
+  }
+  ;
+  ${breakpointsMedia({
+    xs: css`
+      ${({ fullWidth }) => fullWidth && css`
+    width: 100%;
+        `}
+      `,
+    md: css`
+      ${({ fullWidth }) => fullWidth && css`
+    width: 145px;
+  `};
+    `,
+
+  })};
 
     ${propToStyle('margin')}
     ${propToStyle('display')}
