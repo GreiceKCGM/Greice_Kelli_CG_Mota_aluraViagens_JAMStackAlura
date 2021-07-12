@@ -46,6 +46,30 @@ function FormContent() {
     return userInfo.email.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userInfo.email);
   }
 
+  // function cpfMask = value => {
+  //   // captura 2 numeros seguidos de um traço e não deixa ser digitado mais nada
+  // }
+
+  function isValidCPF(cpfMask) {
+    return userInfo.cpf.length === 11;
+  }
+
+  function formataCPF(cpf) {
+    return cpf
+      .replace(/\D/g, '') // substitui qualquer caracter que nao seja numero por nada
+      .replace(/(\d{3})(\d)/, '$1.$2') // captura 2 grupos de numero o primeiro de 3 e o segundo de 1, apos capturar o primeiro grupo ele adiciona um ponto antes do segundo grupo de numero
+      .replace(/(\d{3})(\d)/, '$1.$2')
+      .replace(/(\d{3})(\d{1,2})/, '$1-$2')
+      .replace(/(-\d{2})\d+?$/, '$1'); // captura 2 numeros seguidos de um traço e não deixa ser digitado mais nada
+  }
+
+  function handleChangeCPF(event) {
+    setUserInfo({
+      ...userInfo,
+      cpf: formataCPF(event.target.value),
+    });
+  }
+
   return (
     <PageStyle>
 
@@ -257,7 +281,7 @@ function FormContent() {
           placeholder="000.000.000-00"
           name="cpf"
           value={userInfo.cpf}
-          onChange={handleChange}
+          onChange={handleChangeCPF}
         />
 
         <Text
