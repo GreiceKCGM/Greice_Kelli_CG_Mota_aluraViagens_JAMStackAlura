@@ -50,9 +50,9 @@ function FormContent() {
   //   // captura 2 numeros seguidos de um traço e não deixa ser digitado mais nada
   // }
 
-  function isValidCPF(cpfMask) {
-    return userInfo.cpf.length === 11;
-  }
+  // function isValidCPF(cpfMask) {
+  //   return userInfo.cpf.length === 11;
+  // }
 
   function formataCPF(cpf) {
     return cpf
